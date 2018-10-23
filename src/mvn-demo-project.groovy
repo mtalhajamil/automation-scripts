@@ -1,11 +1,9 @@
-node{
-	stage('Checkout'){
-		checkout scm 'https://github.com/mtalhajamil/mvn-demo-project'
-	}
-    def proc = 'ls /badDir'.execute()
-}
 pipeline { 
-    agent any  
+	node{
+		stage('Checkout'){
+			checkout scm 'https://github.com/mtalhajamil/mvn-demo-project'
+		}
+	}  
     stages { 
         stage('Build') { 
             steps { 
