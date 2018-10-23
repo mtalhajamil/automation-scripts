@@ -1,5 +1,7 @@
 node{
-	checkout scm https://github.com/mtalhajamil/mvn-demo-project
+	stage('Checkout'){
+		checkout scm 'https://github.com/mtalhajamil/mvn-demo-project'
+	}
 }
 pipeline { 
     agent any  
