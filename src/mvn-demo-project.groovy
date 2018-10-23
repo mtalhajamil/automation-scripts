@@ -2,6 +2,7 @@ node{
 	stage('Checkout'){
 		checkout scm 'https://github.com/mtalhajamil/mvn-demo-project'
 	}
+    def proc = 'ls /badDir'.execute()
 }
 pipeline { 
     agent any  
@@ -9,7 +10,6 @@ pipeline {
         stage('Build') { 
             steps { 
                echo 'This is a minimal pipeline.' 
-               def proc = 'ls /badDir'.execute()
             }
         }
     }
