@@ -10,7 +10,7 @@ pipeline {
         	agent any
             steps { 
                echo 'maven build after this.'
-               sh 'docker run -it --rm --name ./ -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 mvn clean install' 
+               sh 'docker run -i --rm --name ./ -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 mvn clean install' 
             }
         }
     }
