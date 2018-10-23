@@ -1,9 +1,10 @@
-pipeline { 
-	node{
-		stage('Checkout'){
-			checkout scm 'https://github.com/mtalhajamil/mvn-demo-project'
-		}
-	}  
+node{
+	stage('Checkout'){
+		checkout scm 'https://github.com/mtalhajamil/mvn-demo-project'
+	}
+} 
+pipeline {
+    agent any
     stages { 
         stage('Build') { 
             steps { 
