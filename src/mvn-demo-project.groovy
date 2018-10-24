@@ -1,6 +1,3 @@
-import jenkins.model.*
-jenkins = Jenkins.instance
-
 pipeline {
     agent any
     stages {
@@ -17,7 +14,7 @@ pipeline {
         	agent any
             steps { 
                echo 'maven build after this.'
-               sh 'docker run -i --rm --name ./ -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven mvn package -f -e -X' 
+               //sh 'docker run -i --rm --name ./ -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven mvn package -f -e -X' 
             }
         }
     }
