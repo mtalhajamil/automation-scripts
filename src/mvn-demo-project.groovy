@@ -2,7 +2,6 @@ pipeline {
     agent any
     stages {
     	stage('Checkout'){
-    		agent any
     		steps{
     			echo 'checkout here'	
     		}
@@ -11,7 +10,6 @@ pipeline {
 		 //    }
 		}
         stage('Build') {
-        	agent any
             steps { 
                echo 'maven build after this.'
                //sh 'docker run -i --rm --name ./ -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven mvn package -f -e -X' 
