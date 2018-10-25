@@ -10,20 +10,6 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                sh 'pwd'
-                // checkout([$class: 'GitSCM',
-                //    branches: [[name: '*/master']],
-                //    doGenerateSubmoduleConfigurations: false,
-                //    extensions: [
-                //        [$class: 'SparseCheckoutPaths',  sparseCheckoutPaths:[[$class:'SparseCheckoutPath', path:'mvn-demo-project/*']]]
-                //                ],
-                //    submoduleCfg: [],
-                //    userRemoteConfigs: [[credentialsId: 'mtalhajamil',
-                //    url: 'https://github.com/mtalhajamil/mvn-demo-project']]])
-
-                //git url: 'https://github.com/mtalhajamil/mvn-demo-project'
-
-
                 dir("code") {
                     checkout([$class           : 'GitSCM',
                               userRemoteConfigs: [[name: 'mtalhajamil',
@@ -52,14 +38,10 @@ pipeline {
                 }
             }
             steps {
-                sh 'pwd'
-                sh 'ls -l'
-                echo 'maven build after this.'
                 echo CHECKOUT_DIR
                 dir(CHECKOUT_DIR){
-                    sh 'mvn package -e -X'
+                    sh 'mvn package -e -X -DskipTests'
                 }
-                //sh 'docker run -i --rm --name ./ -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven mvn package -f -e -X'
             }
         }
     }
