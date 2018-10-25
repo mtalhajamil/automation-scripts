@@ -9,7 +9,7 @@ pipeline {
 			    branches: [[name: '*/master']],
 			    doGenerateSubmoduleConfigurations: false,
 			    extensions: [
-			        [$class: 'SparseCheckoutPaths',  sparseCheckoutPaths:[[$class:'SparseCheckoutPath', path:'']]]
+			        [$class: 'SparseCheckoutPaths',  sparseCheckoutPaths:[[$class:'SparseCheckoutPath']]]
 			                ],
 			    submoduleCfg: [],
 			    userRemoteConfigs: [[credentialsId: 'mtalhajamil',
