@@ -17,6 +17,21 @@ pipeline {
 
 
     			//git url: 'https://github.com/mtalhajamil/mvn-demo-project'
+
+
+    			dir("code") {
+				      checkout([$class: 'GitSCM',
+		                userRemoteConfigs: [[name: 'mtalhajamil',
+		                                     url: 'https://github.com/mtalhajamil/mvn-demo-project']],
+		                branches: [[name: "master"]],
+		                browser: [$class: 'GithubWeb', repoUrl: 'https://github.com/mtalhajamil/mvn-demo-project'],
+		                extensions: [
+		                  [$class: 'CloneOption', honorRefspec: true, noTags: true, reference: '../.git', shallow: true],
+		                  [$class: 'LocalBranch', localBranch: "master"],
+		                ],
+		               ])
+    			}
+
     			sh 'pwd'
 				sh 'ls -l'
 		    }
