@@ -15,6 +15,7 @@ pipeline {
 				    userRemoteConfigs: [[credentialsId: 'mtalhajamil',
 				    url: 'https://github.com/mtalhajamil/mvn-demo-project']]])
     			}
+    			sh 'ls -l'
 		    }
 			
 		}
