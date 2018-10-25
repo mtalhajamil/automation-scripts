@@ -4,7 +4,7 @@ pipeline {
     	stage('Checkout'){
     		steps{
     			echo 'checkout here'
-    			sh 'mkdir mvn-demo-project'
+    			sh 'mkdir -p mvn-demo-project'
 				checkout([$class: 'GitSCM', 
 			    branches: [[name: '*/master']],
 			    doGenerateSubmoduleConfigurations: false,
