@@ -10,7 +10,7 @@ pipeline {
 			    branches: [[name: '*/master']],
 			    doGenerateSubmoduleConfigurations: false,
 			    extensions: [
-			        [$class: 'SparseCheckoutPaths',  sparseCheckoutPaths:[[$class:'SparseCheckoutPath', path:'mvn-demo-project']]]
+			        [$class: 'SparseCheckoutPaths',  sparseCheckoutPaths:[[$class:'SparseCheckoutPath', path:'mvn-demo-project/*']]]
 			                ],
 			    submoduleCfg: [],
 			    userRemoteConfigs: [[credentialsId: 'mtalhajamil',
