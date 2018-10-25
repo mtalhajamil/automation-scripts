@@ -5,11 +5,12 @@ pipeline {
     		steps{
     			echo 'checkout here'
     			sh 'mkdir -p mvn-demo-project'
+    			sh 'ls -l'
 				checkout([$class: 'GitSCM', 
 			    branches: [[name: '*/master']],
 			    doGenerateSubmoduleConfigurations: false,
 			    extensions: [
-			        [$class: 'SparseCheckoutPaths',  sparseCheckoutPaths:[[$class:'SparseCheckoutPath']]]
+			        [$class: 'SparseCheckoutPaths',  sparseCheckoutPaths:[[$class:'SparseCheckoutPath', path:'mvn-demo-project']]]
 			                ],
 			    submoduleCfg: [],
 			    userRemoteConfigs: [[credentialsId: 'mtalhajamil',
