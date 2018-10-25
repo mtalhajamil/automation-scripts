@@ -50,7 +50,7 @@ pipeline {
 //                }
 //            }
             steps {
-                sh 'docker run tomcat:8 -v ' + CHECKOUT_DIR + '/target/*.war:/usr/local/tomcat/webapps/ -e 8000 -p 8000:8000'
+                sh 'docker run tomcat:8 -v ' + CHECKOUT_DIR + '/target/mvnproject-0.0.1-SNAPSHOT:/usr/local/tomcat/webapps/mvn-demo-project -e 8000 -p 8000:8000'
             }
         }
     }
