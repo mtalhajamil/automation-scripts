@@ -4,7 +4,9 @@ pipeline {
         skipDefaultCheckout()
         timeout(time: 1, unit: 'HOURS')
     }
-    def checkoutDir = '';
+    environment {
+        CHECKOUT_DIR = ""
+    }
     stages {
         stage('Checkout') {
             steps {
@@ -35,8 +37,9 @@ pipeline {
                     ])
                 }
 
-                checkoutDir = pwd();
-
+                script{
+                    CHECKOUT_DIR = WORKSPACE + "/code"
+                }
                 sh 'pwd'
             }
 
@@ -52,7 +55,10 @@ pipeline {
                 sh 'pwd'
                 sh 'ls -l'
                 echo 'maven build after this.'
-                sh 'mvn package -f' +checkoutDir + '/code -e -X'
+                echo CHECKOUT_DIR
+                dir(CHECKOUT_DIR){
+                    sh 'mvn package -e -X'
+                }
                 //sh 'docker run -i --rm --name ./ -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven mvn package -f -e -X'
             }
         }

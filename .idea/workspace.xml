@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4551aae6-a2b5-4bb6-bcd7-73160df19459" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mvn-demo-project.groovy" afterPath="$PROJECT_DIR$/src/mvn-demo-project.groovy" />
     </list>
     <ignored path="automation-scripts.iws" />
@@ -29,8 +27,8 @@
       <file leaf-file-name="mvn-demo-project.groovy" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mvn-demo-project.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            <state relative-caret-position="17">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -235,12 +233,12 @@
       <option name="presentableId" value="Default" />
       <updated>1540453429826</updated>
       <workItem from="1540453431348" duration="1080000" />
-      <workItem from="1540454519210" duration="690000" />
+      <workItem from="1540454519210" duration="1382000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1770000" />
+    <option name="totallyTimeSpent" value="2462000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1378" height="743" extended-state="0" />
@@ -291,8 +289,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mvn-demo-project.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        <state relative-caret-position="17">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
