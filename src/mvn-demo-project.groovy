@@ -51,7 +51,7 @@ pipeline {
 //            }
             steps {
                 echo CHECKOUT_DIR + '/target/mvnproject-0.0.1-SNAPSHOT'
-                sh 'docker run -it --rm -e 8080 -p 8080:8080 -v ' + CHECKOUT_DIR + '/target:/usr/local/tomcat/webapps/ tomcat:8'
+                sh 'docker run -i --rm -e 8080 -p 8080:8080 -v ' + CHECKOUT_DIR + '/target:/usr/local/tomcat/webapps/ tomcat:8'
             }
         }
     }
