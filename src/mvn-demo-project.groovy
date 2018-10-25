@@ -14,10 +14,11 @@ pipeline {
 			 //    submoduleCfg: [],
 			 //    userRemoteConfigs: [[credentialsId: 'mtalhajamil',
 			 //    url: 'https://github.com/mtalhajamil/mvn-demo-project']]])
-    // 			sh 'ls -l'
 
-    			git url: 'https://github.com/mtalhajamil/mvn-demo-project'
+
+    			//git url: 'https://github.com/mtalhajamil/mvn-demo-project'
     			sh 'pwd'
+				sh 'ls -l'
 		    }
 			
 		}
