@@ -4,11 +4,11 @@ pipeline {
         skipDefaultCheckout()
         timeout(time: 1, unit: 'HOURS')
     }
+    def checkoutDir = '';
     stages {
         stage('Checkout') {
             steps {
                 sh 'pwd'
-                sh 'ls -l'
                 // checkout([$class: 'GitSCM',
                 //    branches: [[name: '*/master']],
                 //    doGenerateSubmoduleConfigurations: false,
@@ -35,8 +35,9 @@ pipeline {
                     ])
                 }
 
+                checkoutDir = pwd();
+
                 sh 'pwd'
-                sh 'ls -l'
             }
 
         }
@@ -51,7 +52,7 @@ pipeline {
                 sh 'pwd'
                 sh 'ls -l'
                 echo 'maven build after this.'
-                sh 'mvn package -f /code -e -X'
+                sh 'mvn package -f' +checkoutDir + '/code -e -X'
                 //sh 'docker run -i --rm --name ./ -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven mvn package -f -e -X'
             }
         }
