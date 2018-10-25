@@ -44,9 +44,11 @@ pipeline {
 		            args '-v $HOME/.m2:/root/.m2'
 		        }
 		    }
-            steps { 
-               echo 'maven build after this.'
-               sh 'mvn package -f /code -e -X'
+            steps {
+            	sh 'pwd'
+    			sh 'ls -l'
+            	echo 'maven build after this.'
+            	sh 'mvn package -f /code -e -X'
                //sh 'docker run -i --rm --name ./ -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven mvn package -f -e -X' 
             }
         }
