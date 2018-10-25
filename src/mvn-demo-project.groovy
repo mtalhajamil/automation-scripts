@@ -3,7 +3,7 @@ pipeline {
     stages {
     	stage('Checkout'){
     		steps{
-    			echo 'checkout here'
+    			sh 'pwd'
     			sh 'ls -l'
 				// checkout([$class: 'GitSCM', 
 			 //    branches: [[name: '*/master']],
@@ -17,6 +17,7 @@ pipeline {
     // 			sh 'ls -l'
 
     			git url: 'https://github.com/mtalhajamil/mvn-demo-project'
+    			sh 'pwd'
 		    }
 			
 		}
