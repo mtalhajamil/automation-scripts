@@ -4,7 +4,6 @@ pipeline {
     	stage('Checkout'){
     		steps{
     			echo 'checkout here'
-				sh 'cd ..'
     			sh 'mkdir -p mvn-demo-project'
     			sh 'ls -l'
 				checkout([$class: 'GitSCM', 
