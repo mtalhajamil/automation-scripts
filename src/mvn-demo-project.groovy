@@ -26,7 +26,6 @@ pipeline {
                 script{
                     CHECKOUT_DIR = WORKSPACE + "/code"
                 }
-                sh 'pwd'
             }
 
         }
@@ -38,10 +37,20 @@ pipeline {
                 }
             }
             steps {
-                echo CHECKOUT_DIR
                 dir(CHECKOUT_DIR){
                     sh 'mvn package -e -X -DskipTests'
                 }
+            }
+        }
+        stage('Run war on tomcat') {
+//            agent {
+//                docker {
+//                    image 'tomcat:8'
+//                    args '-v $HOME/.m2:/root/.m2'
+//                }
+//            }
+            steps {
+                sh 'docker run tomcat:8 -v ' + CHECKOUT_DIR + '/target/*.war:/usr/local/tomcat/webapps/ -e 8000 -p 8000:8000'
             }
         }
     }
