@@ -45,7 +45,10 @@ pipeline {
         stage('Run war on tomcat') {
             steps {
                 script{
-                    CHECKOUT_DIR = sh 'echo ' + CHECKOUT_DIR + ' | sed \'s|/var/jenkins_home|/jenkins-data|g\''
+                    CHECKOUT_DIR = sh (
+                            script: 'echo ' + CHECKOUT_DIR + ' | sed \'s|/var/jenkins_home|/jenkins-data|g\'',
+                            returnStdout: true
+                    ).trim()
                 }
                 //sh 'str=$(echo ' + CHECKOUT_DIR + ' | sed \'s|/var/jenkins_home|/jenkins-data|g\')'
                 sh 'docker stop jenkins_tomcat'
