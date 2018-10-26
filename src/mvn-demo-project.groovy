@@ -46,7 +46,7 @@ pipeline {
             steps {
                 script{
                     CHECKOUT_DIR = sh (
-                            script: 'echo ' + CHECKOUT_DIR + ' | sed \'s|/var/jenkins_home|jenkins-data|g\'',
+                            script: 'echo ' + CHECKOUT_DIR + ' | sed \'s|/var/jenkins_home|/jenkins-data|g\'',
                             returnStdout: true
                     ).trim()
                 }
