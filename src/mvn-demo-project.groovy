@@ -52,7 +52,7 @@ pipeline {
             steps {
                 echo CHECKOUT_DIR + '/target/mvnproject-0.0.1-SNAPSHOT'
                 sh """
-                    if [ -s ".pidfile"]
+                    if [ -s \".pidfile\"]
                     then
                         if ps -p \$(cat .pidfile) > /dev/null
                         then
