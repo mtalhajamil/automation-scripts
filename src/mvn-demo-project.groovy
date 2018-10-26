@@ -48,7 +48,7 @@ pipeline {
                     CHECKOUT_DIR = sh 'echo ' + CHECKOUT_DIR + ' | sed \'s|/var/jenkins_home|/jenkins-data|g\''
                 }
                 //sh 'str=$(echo ' + CHECKOUT_DIR + ' | sed \'s|/var/jenkins_home|/jenkins-data|g\')'
-                sh 'docker rm jenkins_tomcat'
+                sh 'docker stop jenkins_tomcat | docker rm jenkins_tomcat'
                 sh 'docker run -d -e 8080 -p 8080:8080 -v ' + CHECKOUT_DIR + '/target/:/usr/local/tomcat/webapps/ --name jenkins_tomcat tomcat:8'
                 sh 'sleep 1'
                 sh 'echo $! > .pidfile'
