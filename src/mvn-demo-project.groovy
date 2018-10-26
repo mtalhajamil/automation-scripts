@@ -51,6 +51,15 @@ pipeline {
 //            }
             steps {
                 echo CHECKOUT_DIR + '/target/mvnproject-0.0.1-SNAPSHOT'
+                sh """
+                    if [ -s ".pidfile"]
+                    then
+                        if ps -p \$(cat .pidfile) > /dev/null
+                        then
+                           kill \$(cat .pidfile)
+                        fi
+                    fi
+                """
                 sh 'docker run -d -e 8080 -p 8080:8080 -v ' + CHECKOUT_DIR + '/target/:/usr/local/tomcat/webapps/ --name jenkins_tomcat tomcat:8'
                 sh 'sleep 1'
                 sh 'echo $! > .pidfile'
