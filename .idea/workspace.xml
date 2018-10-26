@@ -28,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/src/mvn-demo-project.groovy">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
-              <caret line="53" column="82" selection-start-line="53" selection-start-column="82" selection-end-line="53" selection-end-column="82" />
+              <caret line="53" column="80" selection-start-line="53" selection-start-column="80" selection-end-line="53" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -557,12 +557,12 @@
       <option name="presentableId" value="Default" />
       <updated>1540453429826</updated>
       <workItem from="1540453431348" duration="1080000" />
-      <workItem from="1540454519210" duration="11869000" />
+      <workItem from="1540454519210" duration="11967000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12949000" />
+    <option name="totallyTimeSpent" value="13047000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1378" height="743" extended-state="0" />
@@ -622,7 +622,7 @@
     <entry file="file://$PROJECT_DIR$/src/mvn-demo-project.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
-          <caret line="53" column="82" selection-start-line="53" selection-start-column="82" selection-end-line="53" selection-end-column="82" />
+          <caret line="53" column="80" selection-start-line="53" selection-start-column="80" selection-end-line="53" selection-end-column="80" />
           <folding />
         </state>
       </provider>
