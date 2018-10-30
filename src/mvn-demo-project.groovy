@@ -52,19 +52,9 @@ pipeline {
 //                            returnStdout: true
 //                    ).trim()
 //                }
+                sh 'cp ' + CHECKOUT_DIR + '/target/* /var/war-directory'
                 sh 'docker stop jk_tomcat || true && docker rm jk_tomcat || true'
-                script{
-                    sh '[ -e Dockerfile ] && rm -rf Dockerfile'
-                    sh 'touch Dockerfile'
-                    sh """
-                        echo 'FROM tomcat:9-jre8-alpine\nADD ./var/jenkins_home/workspace/demo-project/mvn-demo-project-pipeline/source/target/mvnproject-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/ROOT.war' >> Dockerfile
-                    """
-                }
-
-                sh 'docker build -t jk_tomcat .'
-                sh 'dokcer run --name jk_tomcat jk_tomcat'
-
-                //sh 'docker run -d -e 8080 -p 8080:8080 --volumes-from vd_jenkins -v ' + CHECKOUT_DIR + '/target/:/usr/local/tomcat/webapps/ --name jenkins_tomcat tomcat:8'
+                sh 'docker run -d -e 8080 -p 8080:8080 --volumes-from vd_jenkins -v war-directory:/usr/local/tomcat/webapps/ --name jenkins_tomcat tomcat:8'
                 //sh 'sleep 1'
                 //sh 'echo $! > .pidfile'
             }
