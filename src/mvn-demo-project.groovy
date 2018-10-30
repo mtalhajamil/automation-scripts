@@ -1,6 +1,4 @@
 import hudson.FilePath;
-import jenkins.model.Jenkins;
-import groovy.lang.Binding
 
 pipeline {
     agent any
@@ -54,7 +52,7 @@ pipeline {
 //                            returnStdout: true
 //                    ).trim()
 //                }
-                sh 'docker stop jenkins_tomcat || true && docker rm jenkins_tomcat || true'
+                //sh 'docker stop jenkins_tomcat || true && docker rm jenkins_tomcat || true'
                 script{
                     fp = new FilePath(new File(build.workspace.toString() + "/Dockerfile"))
                     if(fp != null)

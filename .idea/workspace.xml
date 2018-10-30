@@ -27,11 +27,9 @@
       <file leaf-file-name="mvn-demo-project.groovy" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mvn-demo-project.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#22#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="306">
+              <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -559,12 +557,12 @@
       <option name="presentableId" value="Default" />
       <updated>1540453429826</updated>
       <workItem from="1540453431348" duration="1080000" />
-      <workItem from="1540454519210" duration="15706000" />
+      <workItem from="1540454519210" duration="16031000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16786000" />
+    <option name="totallyTimeSpent" value="17111000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1378" height="743" extended-state="0" />
@@ -617,19 +615,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mvn-demo-project.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="306">
+          <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
