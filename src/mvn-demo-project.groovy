@@ -53,7 +53,7 @@ pipeline {
 //                    ).trim()
 //                }
                 sh 'cp ' + CHECKOUT_DIR + '/target/*.war /var/war-directory'
-                sh 'docker stop jk_tomcat || true && docker rm jk_tomcat || true'
+                sh 'docker stop jenkins_tomcat || true && docker rm jenkins_tomcat || true'
                 sh 'docker run -d -e 8080 -p 8080:8080 --volumes-from vd_jenkins -v war-directory:/usr/local/tomcat/webapps --name jenkins_tomcat tomcat:8'
                 //sh 'sleep 1'
                 //sh 'echo $! > .pidfile'
