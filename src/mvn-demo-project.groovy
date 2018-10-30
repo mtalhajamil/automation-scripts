@@ -59,8 +59,8 @@ pipeline {
                 }
 
                 //sh 'docker run -d -e 8080 -p 8080:8080 --volumes-from vd_jenkins -v ' + CHECKOUT_DIR + '/target/:/usr/local/tomcat/webapps/ --name jenkins_tomcat tomcat:8'
-                sh 'sleep 1'
-                sh 'echo $! > .pidfile'
+                //sh 'sleep 1'
+                //sh 'echo $! > .pidfile'
             }
         }
     }
