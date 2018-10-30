@@ -54,12 +54,15 @@ pipeline {
 //                    ).trim()
 //                }
                 sh 'docker stop jenkins_tomcat || true && docker rm jenkins_tomcat || true'
-                fp = new FilePath(new File(build.workspace.toString() + "/Dockerfile"))
-                if(fp != null)
-                {
-                    fp.write("FROM tomcat:9-jre8-alpine\n" +
-                            "ADD " + CHECKOUT_DIR + "/target/*.war /usr/local/tomcat/webapps/ROOT.war", null); //writing to file
+                script{
+                    fp = new FilePath(new File(build.workspace.toString() + "/Dockerfile"))
+                    if(fp != null)
+                    {
+                        fp.write("FROM tomcat:9-jre8-alpine\n" +
+                                "ADD " + CHECKOUT_DIR + "/target/*.war /usr/local/tomcat/webapps/ROOT.war", null); //writing to file
+                    }
                 }
+
                 //sh 'docker run -d -e 8080 -p 8080:8080 --volumes-from vd_jenkins -v ' + CHECKOUT_DIR + '/target/:/usr/local/tomcat/webapps/ --name jenkins_tomcat tomcat:8'
                 sh 'sleep 1'
                 sh 'echo $! > .pidfile'
