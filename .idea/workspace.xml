@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4551aae6-a2b5-4bb6-bcd7-73160df19459" name="Default" comment="" />
+    <list default="true" id="4551aae6-a2b5-4bb6-bcd7-73160df19459" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mvn-demo-project.groovy" afterPath="$PROJECT_DIR$/src/mvn-demo-project.groovy" />
+    </list>
     <ignored path="automation-scripts.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -26,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/src/mvn-demo-project.groovy">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="372">
-              <caret line="56" column="94" selection-start-line="56" selection-start-column="94" selection-end-line="56" selection-end-column="94" />
+              <caret line="56" column="58" selection-start-line="56" selection-start-column="58" selection-end-line="56" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -555,12 +557,12 @@
       <option name="presentableId" value="Default" />
       <updated>1540453429826</updated>
       <workItem from="1540453431348" duration="1080000" />
-      <workItem from="1540454519210" duration="24109000" />
+      <workItem from="1540454519210" duration="24716000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25189000" />
+    <option name="totallyTimeSpent" value="25796000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1378" height="743" extended-state="0" />
@@ -620,7 +622,7 @@
     <entry file="file://$PROJECT_DIR$/src/mvn-demo-project.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
-          <caret line="56" column="94" selection-start-line="56" selection-start-column="94" selection-end-line="56" selection-end-column="94" />
+          <caret line="56" column="58" selection-start-line="56" selection-start-column="58" selection-end-line="56" selection-end-column="58" />
           <folding />
         </state>
       </provider>
