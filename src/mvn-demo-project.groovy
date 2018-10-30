@@ -1,5 +1,6 @@
 import hudson.FilePath;
 import jenkins.model.Jenkins;
+import groovy.lang.Binding
 
 pipeline {
     agent any
