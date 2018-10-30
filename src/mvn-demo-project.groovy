@@ -1,3 +1,6 @@
+import hudson.FilePath;
+import jenkins.model.Jenkins;
+
 pipeline {
     agent any
     options {
