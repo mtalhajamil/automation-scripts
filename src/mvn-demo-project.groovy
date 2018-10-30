@@ -56,7 +56,7 @@ pipeline {
                 script{
                     sh 'touch Dockerfile'
                     sh """
-                        echo 'FROM tomcat:9-jre8-alpine\nADD ${env.CHECKOUT_DIR}/target/*.war /usr/local/tomcat/webapps/ROOT.war' >> Dockerfile
+                        echo 'FROM tomcat:9-jre8-alpine\nADD /var/jenkins_home/workspace/demo-project/mvn-demo-project-pipeline/source/target/*.war /usr/local/tomcat/webapps/ROOT.war' >> Dockerfile
                     """
                 }
 
