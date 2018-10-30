@@ -54,6 +54,7 @@ pipeline {
 //                }
                 sh 'docker stop jk_tomcat || true && docker rm jk_tomcat || true'
                 script{
+                    sh '[ -e Dockerfile ] && rm -rf Dockerfile'
                     sh 'touch Dockerfile'
                     sh """
                         echo 'FROM tomcat:9-jre8-alpine\nADD /var/jenkins_home/workspace/demo-project/mvn-demo-project-pipeline/source/target/*.war /usr/local/tomcat/webapps/ROOT.war' >> Dockerfile
